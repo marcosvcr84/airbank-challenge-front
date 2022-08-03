@@ -1,0 +1,11 @@
+query GetTransByAccountIdAndRangeDate($accountId: String!, $initialDate: String!, $finalDate: String!, $page: Int!) {
+  getTransByAccountIdAndRangeDate(accountId: $accountId, initialDate: $initialDate, finalDate: $finalDate, page: $page) {
+    id
+    accountId
+    categoryId
+    reference
+    amount
+    currency
+    date
+  }
+}

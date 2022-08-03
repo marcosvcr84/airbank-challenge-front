@@ -1,0 +1,6 @@
+query GetAccount($accountId: String!) {
+  getAccount(accountId: $accountId) {
+    id
+    name
+  }
+}

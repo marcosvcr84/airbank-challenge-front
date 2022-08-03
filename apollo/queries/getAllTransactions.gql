@@ -1,0 +1,10 @@
+query GetAllTransactions($page: Int!) {
+  getAllTransactions(page: $page) {
+    accountId
+    categoryId
+    reference
+    amount
+    currency
+    date
+  }
+}
