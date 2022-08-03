@@ -187,7 +187,7 @@
               <td class="px-6 py-4 text-sm text-gray-400 whitespace-nowrap" v-if="transaction.reference === ''">
                 No reference provided
               </td>
-              <td class="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
+              <td class="px-6 py-4 text-sm text-gray-800 whitespace-nowrap" :style="'background-color: #'.concat(transaction.categoryColor)">
                 {{ transaction.categoryName }}
               </td>
               <td class="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
@@ -335,6 +335,7 @@ export default {
           resultTransactions[index].accountName = account !== "" ? account.data.getAccount.name : "";
         }
         this.allTransactions = resultTransactions;
+        console.log(this.allTransactions);
       }
     }
   },
